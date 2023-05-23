@@ -14,6 +14,7 @@ import { Projects } from "../components/sections/projects";
 import { StyledNavbar } from "../components/navbar";
 import { Hero } from "../components/sections/hero";
 import { About } from "../components/sections/about";
+import { Footer } from "../components/sections/footer";
 
 const Home = () => {
 	const { title } = useSiteMetadata();
@@ -61,21 +62,13 @@ const Home = () => {
 				<About md={md} />
 			</div>
 			<Container fluid style={{backgroundColor:'#00539C'}} ref={projectRef}>
-				<Row style={{paddingTop:'8rem'}}>
+				<Row style={{paddingTop:md ? '4rem' : '8rem'}}>
 					<Col>
 						<Projects md={md} />
 					</Col>
 				</Row>
 			</Container>
-			<Container fluid style={{backgroundColor:'#00539C'}}>
-				<Row>
-					<Col>
-						<center>
-							<p className="mono" style={{color:"#E2D1F9",fontSize:14}}>Designed by Nam Tran.</p>
-						</center>
-					</Col>
-				</Row>
-			</Container>
+			<Footer />
 		</>
 	)
 };

@@ -6,11 +6,11 @@ import me_img from '../../../static/me.png';
 
 export const About = ({md}) => {
     return (
-        <div style={{backgroundColor:"white",paddingLeft:md ? "3rem" : undefined,paddingRight:md ? "3rem" : undefined}}
+        <div style={{backgroundColor:"white",paddingLeft:md ? "1rem" : undefined,paddingRight:md ? "1rem" : undefined}}
         className={md ? "container-fluid" : "container"} id="about"> 
-            <Row className="d-flex justify-content-center" style={{padding:"5rem 0rem"}}>
+            <Row className="d-flex justify-content-center" style={{padding:md ? "2.5rem 0rem" : "5rem 0rem"}}>
                 <Col xl={10} lg={10} md={12} className="d-flex">
-                    <div style={{marginRight:'48px'}}>
+                    <div style={{marginRight:md ? undefined : '48px'}}>
                         <h1 className="title about-me">About me</h1>
                         <p className="home-page-text">
                             Hello! My name is Nam Tran and I enjoy building things through code as a creative outlet.
@@ -29,7 +29,7 @@ export const About = ({md}) => {
                         </p>
                         <ul className="technology-list">
                             <li>
-                                <p className="technology">React / React Native</p>
+                                <p className="technology">React</p>
                             </li>
                             <li>
                                 <p className="technology">Node.js</p>
@@ -38,7 +38,7 @@ export const About = ({md}) => {
                                 <p className="technology">JavaScript (ES6+)</p>
                             </li>
                             <li>
-                                <p className="technology">TypeScript</p>
+                                <p className="technology">React Native</p>
                             </li>
                             <li>
                                 <p className="technology">Python</p>
@@ -49,11 +49,11 @@ export const About = ({md}) => {
                         </ul>
                     </div>
                     <div className="d-none d-md-block">
-                        <Headshot photo={me_img} width={300} height={300} color="black" />
+                        <Headshot photo={me_img} width={300} height={300} color="black" md={md} />
                     </div>
                 </Col>
                 <Col className="d-flex d-md-none justify-content-center" style={{marginTop:'32px'}}>
-                    <Headshot photo={me_img} width={300} height={300} color="black" />
+                    <Headshot photo={me_img} width={300} height={300} color="black" md={md} />
                 </Col>
             </Row>
         </div>

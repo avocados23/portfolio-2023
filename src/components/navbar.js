@@ -20,13 +20,13 @@ export const StyledNavbar = ({showBg, md, setMd, aboutRefScrollFunc, projectsRef
 
     return (
         <>
-            <Navbar fixed="top" className={showBg ? "navbar-with-bg scrolled" : "navbar-with-bg"} style={{padding: md ? "1rem 2rem" : undefined}}>
+            <Navbar fixed="top" className={showBg ? "navbar-with-bg scrolled" : "navbar-with-bg"} style={{padding: md ? "1rem 0.5rem" : undefined}}>
                 <div style={{width:"100%",paddingRight:0}} className={md ? "container-fluid" : "container"}>
                     <Row className="d-flex justify-content-between" style={{width:"100%"}}>
-                        <Col>
-                            <Nav.Link href="#" className={showBg ? "navbar-text logo link scrolled" : "navbar-text logo link"}>Nam Tran</Nav.Link>
+                        <Col md={8} sm={8} xs={8}>
+                            <Nav.Link href="#" className={showBg ? "navbar-text logo link scrolled" : "navbar-text logo link"} style={{fontSize:md ? '16px' : undefined}}>Nam Tran</Nav.Link>
                         </Col>
-                        <Col className="d-lg-none d-flex justify-content-end" style={{paddingRight:0}}>
+                        <Col md={4} sm={4} xs={4} className="d-lg-none d-flex justify-content-end" style={{paddingRight:0}}>
                             <BiMenuAltRight size={32} className={showBg ? "mobile-menu black" : "mobile-menu"} onClick={() => setShow(true)} />
                         </Col>
                         <Col className="d-none d-lg-flex justify-content-end" style={{paddingRight:0}}>

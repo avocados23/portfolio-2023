@@ -6,9 +6,9 @@ export const Hero = ({title, md}) => {
         <Container fluid className="hero">
             <Row>
                 <Col>
-                    <div className={md ? "container-fluid" : "container"} style={{paddingLeft:md ? "3rem" : undefined,paddingRight:md ? "3rem" : undefined}}>
-                        <Row style={{paddingTop:'10rem'}} className="d-flex justify-content-center">
-                            <Col xl={9}>
+                    <div className={md ? "container-fluid" : "container"} style={{paddingLeft:md ? "0.5rem" : 0,paddingRight:md ? "0.5rem" : 0}}>
+                        <Row className="d-flex justify-content-center">
+                            <Col xl={9} lg={12}>
                                 <h6 className="mono" style={{color:"#E2D1F9"}}>Hi, my name is</h6>
                                 <h1 className="title welcome">{title}</h1>
                                 <h1 className="welcome welcome-muted">I enjoy designing and building things through code.</h1>

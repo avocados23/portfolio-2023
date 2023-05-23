@@ -27,7 +27,7 @@ const projects = [
         title: "Portfolio Template",
         description: "My open-sourced static site portfolio for anyone to use, designed from scratch in React, built in Gatsby, and deployed on Vercel.",
         platforms: ["React", "Gatsby", "Bootstrap", "GraphQL", "Styled Components"],
-        github: "#",
+        github: "https://github.com/avocados23/portfolio-2023",
         external: "#"
     },
     {
@@ -41,14 +41,14 @@ export const Projects = ({md}) => {
     const [index, setIndex] = useState(0);
 
     return (
-        <div style={{paddingLeft:md ? "3rem" : undefined,paddingRight:md ? "3rem" : undefined}} className={md ? "container-fluid" : "container"} id="projects">
+        <div style={{paddingLeft:md ? "0.5rem" : undefined,paddingRight:md ? "0.5rem" : undefined}} className={md ? "container-fluid" : "container"} id="projects">
             <Row className="d-flex justify-content-center">
-                <Col xl={9} lg={10} md={12}>
+                <Col xl={9} lg={10} md={12} sm={12} xs={12}>
                     <h2 className="title projects">Notable projects</h2>
                     <div className="d-flex projects-mobile d-lg-none">
                         {
                             projects.map((project, i) => (
-                                <div role="presentation" className={index === i ? "project active" : "project"} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</div>
+                                <div role="presentation" key={project.title} className={index === i ? "project active" : "project"} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</div>
                             ))
                         }
                     </div>
@@ -56,7 +56,7 @@ export const Projects = ({md}) => {
                         <div className="projects d-none d-lg-block">
                             {
                                 projects.map((project, i) => (
-                                    <a className={index === i ? "project active" : "project"} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</a>
+                                    <a key={project.title} className={index === i ? "project active" : "project"} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</a>
                                 ))
                             }
                         </div>
