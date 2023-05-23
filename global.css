@@ -1,0 +1,447 @@
+/*
+* Custom stylesheet themes for my portfolio.
+* @author Nam Tran
+* @version 5.2.2023
+*/
+@font-face {
+    font-family: "Sohne";
+    src: url('/static/fonts/test-soehne-extraleicht.woff2');
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/static/fonts/test-soehne-extraleicht-kursiv.woff2');
+    font-style: italic;
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/static/fonts/test-soehne-leicht.woff2');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/static/fonts/test-soehne-leicht-kursiv.woff2');
+    font-style: italic;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-buch.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-buch-kursiv.woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-kraftig.woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-kraftig-kursiv.woff2');
+    font-style: italic;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-halbfett.woff2');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-halbfett-kursiv.woff2');
+    font-style: italic;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-dreiviertelfett.woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-dreiviertelfett-kursiv.woff2');
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-fett.woff2');
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-fett-kursiv.woff2');
+    font-style: italic;
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-extrafett.woff2');
+    font-style: normal;
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Sohne";
+    src: url('/fonts/test-soehne-extrafett-kursiv.woff2');
+    font-style: italic;
+    font-weight: 900;
+}
+@font-face {
+    font-family: "Sohne Mono";
+    src: url('/fonts/test-soehne-mono-leicht.woff2');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Sohne Mono";
+    src: url('/fonts/test-soehne-mono-buch.woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Sohne Breit";
+    src: url('/fonts/test-soehne-breit-dreiviertelfett.woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Sohne Breit";
+    src: url('/fonts/test-soehne-breit-kraftig.woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Sohne Breit";
+    src: url('/fonts/test-soehne-breit-halbfett.woff2');
+    font-style: normal;
+    font-weight: 600;
+}
+html, body {
+    background-color: white;
+    font-family: "Sohne", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.mono {
+    font-family: "Sohne Mono";
+}
+p {
+    font-size: 20px;
+    color: black;
+}
+a.external {
+    color: black !important;
+    -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+}
+.title {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+.welcome {
+    color: #E2D1F9;
+    font-family: "Sohne Breit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+.logo {
+    font-family: "Sohne Breit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+.welcome-muted {
+    color: #E2D1F9;
+    opacity: 0.75;
+}
+.title.about-me {
+    color: black;
+    font-size: 40px;
+}
+.title.projects {
+    font-size: 40px;
+    color: #EEA47F;
+}
+.home-page-text {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: normal;
+    color: black;
+}
+.home-page-text.welcome {
+    color: #E2D1F9;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.home-page-text.projects {
+    color: #EEA47F;
+}
+.navbar-with-bg {
+    background: none !important;
+    padding: 1rem;
+    -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+}
+.navbar-with-bg.scrolled {
+    background-color: white !important;
+}
+.navbar-text {
+    margin-bottom: 0px;
+    font-size: 20px;
+    margin-right: 10px;
+    -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+    color: #E2D1F9;
+    text-decoration: none;
+}
+.link {
+    margin-right: 24px;
+}
+.navbar-text.scrolled {
+    color: black !important;
+}
+.navbar-text:hover {
+    opacity: 0.8;
+    color: #E2D1F9;
+}
+.resume-button-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #E2D1F9;
+}
+.resume-button-text.scrolled {
+    color: black;
+}
+.resume-button {
+    border-color:#E2D1F9 !important;
+    border-radius: 0px;
+}
+.resume-button:hover {
+    background: none;
+}
+.resume-button.scrolled {
+    border-color: black !important;
+}
+ul.technology-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-type: "🔔   "
+}
+.technology {
+    font-family: "Sohne Mono";
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.notable-projects {
+    display: flex;
+    position: relative;
+    height: 425px;
+}
+.notable-projects .projects {
+    width: 250px;
+    min-height: 425px;
+    position: relative;
+}
+.notable-projects .projects .project {
+    width: 100%;
+    display: block;
+    padding: 0.8rem 1.2rem;
+    margin: 0px;
+    font-family: "Sohne Mono";
+    font-size: 15px;
+    -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+    color: #2188e3;
+    border-left: solid #2188e3 2px;
+    text-decoration: none;
+}
+.notable-projects .projects .project:hover {
+    background-color: rgba(255,255,255,0.3) !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #EEA47F !important;
+    cursor: pointer;
+}
+.notable-projects .projects .project.active {
+    color: #EEA47F !important;
+    border-left: solid #EEA47F 2px !important;
+}
+.notable-projects .projects .project p {
+    margin-bottom: 0px;
+}
+.projects-mobile {
+    display: flex;
+    flex-shrink: 0;
+    width: calc(100%);
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+.projects-mobile .project {
+    margin-bottom: 0px;
+    padding: 0.6rem 1.1rem;
+    color: #2188e3;
+    border-bottom: solid #2188e3 2px;
+    font-size: 13px;
+    font-family: "Sohne Mono";
+    flex-shrink: 0;
+    -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+}
+.projects-mobile .project.active {
+    color: #EEA47F !important;
+    border-bottom: solid #EEA47F 2px !important;
+}
+.notable-projects .container-info {
+    width: calc(100% - 200px);
+    min-height: 425px;
+    padding: 0.4rem 2.75rem;
+    position: relative;
+}
+@media (max-width: 991.98px) {
+    .notable-projects .container-info {
+        width: 100%;
+        padding: 0px;
+    }
+}
+.project-title {
+    font-family: "Sohne";
+    font-weight: 500;
+    color: #EEA47F;
+    margin-bottom: 24px;
+}
+.project-description {
+    border-radius: 5px;
+    padding: 1.5rem 2rem;
+    background-color: #0d6cbf;
+    margin-bottom: 8px;
+}
+.project-description p {
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #EEA47F;
+}
+.externals {
+    display: flex;
+}
+.externals .icon {
+    margin-right: 20px;
+    color: #EEA47F;
+}
+.technologies {
+    display: flex;
+    padding: 1rem 0rem;
+    margin-bottom: 12px;
+    width: 100%;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+.technologies p {
+    margin-right: 24px;
+    margin-bottom: 0px;
+    color: #bd8366;
+    font-size: 14px;
+    font-family: "Sohne Mono";
+    flex-shrink: 0;
+    background-color: #0d6cbf;
+    padding: 4px 13px;
+    border-radius: 15px;
+}
+.technologies p:last-child {
+    margin-right: 0px;
+}
+.mobile-menu {
+    position: relative;
+    top: 8px;
+    color: #E2D1F9;
+}
+.mobile-menu:hover {
+    cursor: pointer;
+}
+.mobile-menu.black {
+    color: black;
+}
+.socials {
+    position: fixed;
+    bottom: 0px;
+    left: 64px;
+}
+.socials .social {
+    display: block;
+    color: rgba(255, 255, 255, 0.7) !important;
+    -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+    margin-bottom: 24px;
+}
+.socials .social.black {
+    color: black !important;
+}
+.socials .social.black:hover {
+    color: black !important;
+    cursor: pointer;
+}
+.socials .social:hover {
+    color: white !important;
+    cursor: pointer;
+}
+.thin-line-socials {
+    width: 1px;
+    height: 85px;
+    background-color: white !important;
+     -webkit-transition: all ease-out .1s;
+    -moz-transition: all ease-out .1s;
+    -o-transition: all ease-out .1s;
+    transition: all ease-out .1s;
+}
+.thin-line-socials.black {
+    background-color: black !important;
+}
+.me-img {
+    position: relative;
+    z-index: 2;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.me-img-behind {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    right: -8px;
+    border-radius: 5px;
+}
+.hero {
+    margin-top: 0px;
+    height: 100vh;
+    background-color: #317773;
+}
+a.offcanvas-menu {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 24px;
+    font-family: "Sohne", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+}
