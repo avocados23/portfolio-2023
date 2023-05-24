@@ -1,6 +1,4 @@
-import * as React from "react"
-import { useState, useEffect, useRef } from "react";
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState, useEffect, useRef } from "react";
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,6 +13,7 @@ import { StyledNavbar } from "../components/navbar";
 import { Hero } from "../components/sections/hero";
 import { About } from "../components/sections/about";
 import { Footer } from "../components/sections/footer";
+import { ThemeProvider } from "../components/themecontext";
 
 const Home = () => {
 	const { title } = useSiteMetadata();
@@ -52,24 +51,19 @@ const Home = () => {
 	const aboutRef = useRef(null);
 	const aboutRefScroll = () => aboutRef.current.scrollIntoView();
 
-
 	return (
-		<>
+		<ThemeProvider>
 			<Socials isVisible={isVisible} showBg={showBg} />
 			<StyledNavbar setMd={setMd} md={md} showBg={showBg} aboutRefScrollFunc={aboutRefScroll} projectsRefScrollFunc={projectRefScroll} />
 			<Hero title={title} md={md} />
 			<div id="about" ref={aboutRef}>
 				<About md={md} />
 			</div>
-			<Container fluid style={{backgroundColor:'#00539C'}} ref={projectRef}>
-				<Row style={{paddingTop:md ? '4rem' : '8rem'}}>
-					<Col>
-						<Projects md={md} />
-					</Col>
-				</Row>
-			</Container>
+			<div id="projects" ref={projectRef}>
+				<Projects md={md} />
+			</div>
 			<Footer />
-		</>
+		</ThemeProvider>
 	)
 };
 

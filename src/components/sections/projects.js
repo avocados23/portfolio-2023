@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FiGithub, FiExternalLink, FiLink } from 'react-icons/fi';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
+import { ThemeContext } from '../themecontext';
 
 const projects = [
     {
@@ -39,54 +40,61 @@ const projects = [
 
 export const Projects = ({md}) => {
     const [index, setIndex] = useState(0);
+    const { theme } = useContext(ThemeContext);
 
     return (
-        <div style={{paddingLeft:md ? "0.5rem" : undefined,paddingRight:md ? "0.5rem" : undefined}} className={md ? "container-fluid" : "container"} id="projects">
-            <Row className="d-flex justify-content-center">
-                <Col xl={9} lg={10} md={12} sm={12} xs={12}>
-                    <h2 className="title projects">Notable projects</h2>
-                    <div className="d-flex projects-mobile d-lg-none">
-                        {
-                            projects.map((project, i) => (
-                                <div role="presentation" key={project.title} className={index === i ? "project active" : "project"} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</div>
-                            ))
-                        }
-                    </div>
-                    <div className="notable-projects">
-                        <div className="projects d-none d-lg-block">
-                            {
-                                projects.map((project, i) => (
-                                    <a key={project.title} className={index === i ? "project active" : "project"} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</a>
-                                ))
-                            }
-                        </div>
-                        <div className="container-info">
-                            <h4 className="project-title">{projects[index].title}</h4>
-                            <div className="project-description">
-                                <p>{projects[index].description}</p>
-                            </div>
-                            <div className="technologies">
-                                {
-                                    projects[index].platforms.map(platform => (
-                                        <p>{platform}</p>
-                                    ))
-                                }
-                            </div>
-                            <div className="externals">
-                                {
-                                    projects[index].github && <a href={projects[index].github} aria-label="repository"><FiGithub size={24} className="icon" /></a>
-                                }
-                                {
-                                    projects[index].external && <a href={projects[index].external} aria-label="external link"><FiExternalLink size={24} className="icon" /></a>
-                                }
-                                {
-                                    projects[index].blog && <a href={projects[index].blog} aria-label="blog"><FiLink size={24} className="icon" /></a>
-                                }
-                            </div>
-                        </div>
+        <Container fluid style={{backgroundColor: theme === 'light' ? '#00539C' : 'black'}}>
+            <Row style={{paddingTop:md ? '4rem' : '8rem'}}>
+                <Col>
+                    <div style={{paddingLeft:md ? "0.5rem" : undefined,paddingRight:md ? "0.5rem" : undefined}} className={md ? "container-fluid" : "container"} id="projects">
+                        <Row className="d-flex justify-content-center">
+                            <Col xl={9} lg={10} md={12} sm={12} xs={12}>
+                                <h2 className="title projects">Notable projects</h2>
+                                <div className={`d-flex projects-mobile d-lg-none`}>
+                                    {
+                                        projects.map((project, i) => (
+                                            <div role="presentation" key={project.title} className={index === i ? "project active" : `project ${theme === 'dark' && 'dark'}`} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</div>
+                                        ))
+                                    }
+                                </div>
+                                <div className="notable-projects">
+                                    <div className="projects d-none d-lg-block">
+                                        {
+                                            projects.map((project, i) => (
+                                                <div role="button" tabIndex={0} key={project.title} className={index === i ? "project active" : `project ${theme === 'dark' && 'dark'}`} onClick={() => setIndex(i)} onKeyDown={() => setIndex(i)}>{project.title}</div>
+                                            ))
+                                        }
+                                    </div>
+                                    <div className="container-info">
+                                        <h4 className="project-title">{projects[index].title}</h4>
+                                        <div className={`project-description ${theme === 'dark' && 'dark'}`}>
+                                            <p>{projects[index].description}</p>
+                                        </div>
+                                        <div className={`technologies ${theme === 'dark' && 'dark'}`}>
+                                            {
+                                                projects[index].platforms.map(platform => (
+                                                    <p>{platform}</p>
+                                                ))
+                                            }
+                                        </div>
+                                        <div className="externals">
+                                            {
+                                                projects[index].github && <a href={projects[index].github} aria-label="repository"><FiGithub size={24} className="icon" /></a>
+                                            }
+                                            {
+                                                projects[index].external && <a href={projects[index].external} aria-label="external link"><FiExternalLink size={24} className="icon" /></a>
+                                            }
+                                            {
+                                                projects[index].blog && <a href={projects[index].blog} aria-label="blog"><FiLink size={24} className="icon" /></a>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
                     </div>
                 </Col>
             </Row>
-        </div>
+        </Container>
     )
 }

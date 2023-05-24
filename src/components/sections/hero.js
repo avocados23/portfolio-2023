@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { ThemeContext } from '../themecontext';
 
 export const Hero = ({title, md}) => {
+
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <Container fluid className="hero">
+        <Container fluid className={theme === 'light' ? 'hero' : 'hero dark'}>
             <Row>
                 <Col>
                     <div className={md ? "container-fluid" : "container"} style={{paddingLeft:md ? "0.5rem" : 0,paddingRight:md ? "0.5rem" : 0}}>
