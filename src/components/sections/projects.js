@@ -25,6 +25,13 @@ const projects = [
         github: "https://github.com/availabowl/menu-webscraper"
     },
     {
+        title: "User Mentioning",
+        description: "Textarea box that supports username mentioning with the @ symbol, including an overlay when potential matches are found and autocompleting usernames. Open sourced from Availabowl.",
+        platforms: ["React", "Vercel"],
+        github: "https://github.com/availabowl/user-mentions",
+        external: "https://user-mentions.vercel.app/"
+    },
+    {
         title: "Portfolio Template",
         description: "My open-sourced static site portfolio for anyone to use, designed from scratch in React, built in Gatsby, and deployed on Vercel.",
         platforms: ["React", "Gatsby", "Bootstrap", "GraphQL", "Styled Components"],
