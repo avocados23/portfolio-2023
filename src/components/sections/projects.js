@@ -19,17 +19,23 @@ const projects = [
         github: "https://github.com/avocados23/capstone-spring2023_flask"
     },
     {
+        title: "User Mentioning",
+        description: "Textarea box that supports username mentioning with the @ symbol, including an overlay when potential matches are found and autocompleting usernames.",
+        platforms: ["React", "Vercel"],
+        github: "https://github.com/availabowl/user-mentions",
+        external: "https://user-mentions.vercel.app/"
+    },
+    {
         title: "Virginia Tech Menu",
         description: "Deprecated Availabowl feature that is able to webscrape available food at a dining hall and return it as a JSON-friendly output, including vegan and vegetarian restrictions. Repository also includes webscraper code for retrieving dining hall hours.",
         platforms: ["Node.js", "Puppeteer", "MongoDB", "Express", "Webscraping"],
         github: "https://github.com/availabowl/menu-webscraper"
     },
     {
-        title: "User Mentioning",
-        description: "Textarea box that supports username mentioning with the @ symbol, including an overlay when potential matches are found and autocompleting usernames. Open sourced from Availabowl.",
-        platforms: ["React", "Vercel"],
-        github: "https://github.com/availabowl/user-mentions",
-        external: "https://user-mentions.vercel.app/"
+        title: "AI Sponge",
+        description: "AI-generated TTS conversation program built in Python and OpenAI, simulating conversation between SpongeBob and Patrick.",
+        platforms: ["Python", "OpenAI", "Uberduck", "GPT-3"],
+        github: "https://github.com/avocados23/ai-sponge"
     },
     {
         title: "Portfolio Template",
