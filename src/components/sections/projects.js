@@ -32,12 +32,6 @@ const projects = [
         github: "https://github.com/availabowl/menu-webscraper"
     },
     {
-        title: "AI Sponge",
-        description: "AI-generated TTS conversation program built in Python and OpenAI, simulating conversation between SpongeBob and Patrick.",
-        platforms: ["Python", "OpenAI", "Uberduck", "GPT-3"],
-        github: "https://github.com/avocados23/ai-sponge"
-    },
-    {
         title: "Portfolio Template",
         description: "My open-sourced static site portfolio for anyone to use, designed from scratch in React, built in Gatsby, and deployed on Vercel.",
         platforms: ["React", "Gatsby", "Bootstrap", "GraphQL", "Styled Components"],
