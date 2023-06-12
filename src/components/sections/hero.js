@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { ThemeContext } from '../themecontext';
 
 export const Hero = ({title, md}) => {
@@ -19,6 +19,9 @@ export const Hero = ({title, md}) => {
                                 <p style={{marginTop:'32px'}} className="welcome-muted">
                                     I am a recent Virginia Tech computer science graduate, looking to apply my passion, creativity, and problem-solving skills in designing a great digital experience. Currently, I am looking for a job that allows me to do such.
                                 </p>
+                                <Button variant="outline-dark" className="resume-button" style={{marginTop:'24px'}} href="https://www.availabowl.com/">
+                                    <span style={{color:"#E2D1F9"}}>Check out my latest project!</span>
+                                </Button>
                             </Col>
                         </Row>
                     </div>

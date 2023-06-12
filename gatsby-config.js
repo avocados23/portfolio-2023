@@ -9,7 +9,9 @@
  */
 module.exports = {
   siteMetadata: {
-    title: 'Nam Tran.'
+    title: 'Nam Tran',
+    description: 'Portfolio website of Nam Tran',
+    siteUrl: 'https://namtran.vercel.app'
   },
   plugins: [],
 }
