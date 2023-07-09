@@ -8,9 +8,10 @@ const projects = [
         title: "Availabowl",
         description: 
         "Social network where college students sign up, review, and view others' opinions on dining halls at their university. Full project also contains an administrator app to manage overall data. You can also view my blog where I discuss progress and changes to the app.",
-        platforms: ["React", "MongoDB", "Node.js", "Express", "EJS", "AWS", "OAuth"],
+        platforms: ["React", "MongoDB", "Node.js", "Express", "EJS", "AWS", "Next.js"],
         external: "https://www.availabowl.com/",
-        blog: "https://availabowldevs.wordpress.com/"
+        blog: "https://availabowldevs.wordpress.com/",
+        github: "https://github.com/availabowl"
     },
     {
         title: "Smart Parking",
@@ -79,8 +80,8 @@ export const Projects = ({md}) => {
                                         </div>
                                         <div className={`technologies ${theme === 'dark' && 'dark'}`}>
                                             {
-                                                projects[index].platforms.map(platform => (
-                                                    <p>{platform}</p>
+                                                projects[index].platforms.map((platform, i) => (
+                                                    <p key={i}>{platform}</p>
                                                 ))
                                             }
                                         </div>

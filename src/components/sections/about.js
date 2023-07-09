@@ -29,7 +29,8 @@ export const About = ({md}) => {
                                         I enjoy both facets of full-stack app development, but my greatest passion is in frontend software development, both in web and mobile applications.
                                         <br/><br />
                                         I most recently launched a web app, <a href="https://www.availabowl.com/" className="external">Availabowl</a>, which allows students to sign up,
-                                        review, and view others' opinions on dining halls at their university.
+                                        review, and view others' opinions on dining halls at their university. Currently, I am streamlining its web version to be simplified and migrated to Next.js, and
+                                        emphasizing its usage to be on mobile devices in React Native.
                                         <br/><br/>
                                         Here are a few technologies I've been working with, recently:
                                     </p>
@@ -50,7 +51,7 @@ export const About = ({md}) => {
                                             <p className="technology">JavaScript (ES6+)</p>
                                         </li>
                                         <li>
-                                            <p className="technology">Gatsby</p>
+                                            <p className="technology">Next.js</p>
                                         </li>
                                     </ul>
                                 </div>
